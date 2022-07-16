@@ -1,0 +1,55 @@
+<div class="body-container">
+	<form name="f" [formGroup]="ClientForm" class="form">
+		<div class="wrapper">
+			<div class="main-content">
+				<h1>Create New Client Record</h1>
+				<hr class="title-bar" />
+				<label for="lastName">Last Name</label>
+        	<input name="name"  formControlName="lastName" placeholder="Enter Name" type="name" required>
+          <div *ngIf="formErrors.lastName" class="err-msg">
+          Last name is required
+        </div>
+        <label for="firstName">First Name</label>
+        <input name="name"  formControlName="firstName" placeholder="Enter Name" type="name" required>
+        <div *ngIf="formErrors.firstName" class="err-msg">
+          First name is required
+        </div>
+        <label for="ssnKey">Filing Key</label>
+        <input name="name"  formControlName="ssnKey" placeholder="Enter Filing Key" type="name" required>
+        <div *ngIf="formErrors.ssnKey" class="err-msg">
+          Filing key is required
+        </div>
+        <div *ngIf="formErrors.ssnKey" class="err-msg">
+          A valid filing key is required: ex. D1234_Doe_Jr_John
+        </div>
+       <label for="phone">Phone Number</label>
+       <input name="phone"  formControlName="phone" placeholder="Enter phone number" type="name" required>
+        <div *ngIf="formErrors.phone" class="err-msg">
+          Phone number is required
+        </div>
+        <div *ngIf="formErrors.phone" class="err-msg">
+          A valid phone number is required: ex. 5555555555
+        </div>
+      <label for="email">Email</label>
+      <input name="email"  formControlName="email" placeholder="Enter email" type="name" email required>
+        <div *ngIf="formErrors.email" class="err-msg">
+          Email is required
+        </div>
+        <div *ngIf="formErrors.email" class="err-msg">
+          A valid email is required
+        </div>
+         <label for="ssn">Social Security Number</label>
+         <input name="ssn"  formControlName="ssn" placeholder="XXX-XX-XXXX" type="name"  required>
+        <div *ngIf="formErrors.ssn" class="err-msg">
+          Social security number is required
+        </div>
+        <div *ngIf="formErrors.ssn" class="err-msg">
+          A valid social security number is required: ex. 123-45-6789
+        </div>
+         <br />
+        <button (click)="onSubmit()" class="next square" name="button">Next</button>
+        <div class="foot-space"></div>
+      </div>
+    </div>
+  </form>
+   </div>
